@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: dhritrashtra_db
+    environment:
+      POSTGRES_USER: dhritrashtra
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: dhritrashtra
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dhritrashtra"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: ./backend
+    container_name: dhritrashtra_backend
+    environment:
+      DATABASE_URL: postgresql://dhritrashtra:password@postgres:5432/dhritrashtra
+      FLASK_ENV: development
+      FLASK_APP: app.py
+    ports:
+      - "5000:5000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+
+  frontend:
+    build: ./frontend
+    container_name: dhritrashtra_frontend
+    ports:
+      - "3000:3000"
+    environment:
+      VITE_API_URL: http://localhost:5000/api
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app
+
+volumes:
+  postgres_data:
+
+networks:
+  default:
+    name: dhritrashtra_network

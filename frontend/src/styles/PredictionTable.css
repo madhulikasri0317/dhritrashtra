@@ -1,0 +1,97 @@
+/* Prediction Table Styles */
+
+.prediction-table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.prediction-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.prediction-table thead {
+  background-color: #f3f4f6;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.prediction-table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.prediction-table td {
+  padding: 15px;
+  border-bottom: 1px solid #f3f4f6;
+  color: #4b5563;
+}
+
+.prediction-table tbody tr {
+  transition: background-color 0.2s;
+}
+
+.prediction-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.risk-score-bar {
+  position: relative;
+  width: 120px;
+  height: 24px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.risk-score-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s;
+}
+
+.risk-score-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.risk-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: white;
+}
+
+.risk-high .risk-badge {
+  background-color: #dc2626;
+}
+
+.risk-medium .risk-badge {
+  background-color: #f59e0b;
+}
+
+.risk-low .risk-badge {
+  background-color: #10b981;
+}
+
+@media (max-width: 768px) {
+  .prediction-table th,
+  .prediction-table td {
+    padding: 12px 8px;
+    font-size: 0.85rem;
+  }
+
+  .risk-score-bar {
+    width: 80px;
+  }
+}

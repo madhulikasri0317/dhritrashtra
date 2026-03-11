@@ -1,0 +1,60 @@
+/* Risk Map Styles */
+
+.risk-map-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.map-header {
+  padding: 20px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.map-header h1 {
+  font-size: 1.8rem;
+  color: #1f2937;
+}
+
+.map-legend {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.legend-item .color-box {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+.legend-item.high .color-box {
+  background-color: #dc2626;
+}
+
+.legend-item.medium .color-box {
+  background-color: #f59e0b;
+}
+
+.legend-item.low .color-box {
+  background-color: #10b981;
+}
+
+.map {
+  flex: 1;
+  position: relative;
+}

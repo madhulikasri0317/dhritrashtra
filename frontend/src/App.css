@@ -1,0 +1,7 @@
+/* App CSS - Minimal global styles */
+/* Most styling is handled by TailwindCSS classes */
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}

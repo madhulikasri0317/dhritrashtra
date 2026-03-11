@@ -1,0 +1,63 @@
+# Backend
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+venv/
+env/
+.venv
+.env
+.DS_Store
+*.log
+.pytest_cache/
+.coverage
+htmlcov/
+instance/
+.webassets-cache
+
+# Frontend
+node_modules/
+dist/
+build/
+.cache/
+.env
+.env.local
+.env.*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+*.tsbuildinfo
+.turbo
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.project
+.pydevproject
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+pgpass
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
