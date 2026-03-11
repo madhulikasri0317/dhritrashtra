@@ -231,7 +231,9 @@ npm test
 
 ## 📝 License
 
-This project is licensed under the MIT License - see LICENSE file for details.
+Copyright (c) 2026 madhulikasri0317. All Rights Reserved.
+
+This project is proprietary. No part of the code may be reproduced, distributed, or used without prior written permission from the owner. See the [LICENSE](LICENSE) file for full terms.
 
 ## 🤝 Contributing
 
